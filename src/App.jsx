@@ -12,11 +12,11 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/view/:infor/:pin" element={<ApplicationView />} />
-        <Route path="/form" element={<Form />} />
-        <Route path="/admin/dashboard" element={<Admin />} />
-        <Route path="/member/dashboard" element={<MemberDashboard />} />
-        <Route path="/update-member/:id" element={<UpdateMember />} />
+        <Route path="https://presby.onrender.com/view/:infor/:pin" element={<ApplicationView />} />
+        <Route path="https://presby.onrender.com/form" element={<Form />} />
+        <Route path="https://presby.onrender.com/admin/dashboard" element={<Admin />} />
+        <Route path="https://presby.onrender.com/member/dashboard" element={<MemberDashboard />} />
+        <Route path="https://presby.onrender.com/update-member/:id" element={<UpdateMember />} />
       </Routes>
     </Router>
   );
