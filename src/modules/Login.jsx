@@ -29,8 +29,8 @@ const Login = () => {
           //   window.location.href = `/${role}/dashboard`;
           // }, 4000);
         })
-        .catch((err) => {
-          console.log(err)
+        .catch(() => {
+          alert("Invalid credentials")
         })
         .finally(() => {
           setTimeout(() => {
