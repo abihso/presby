@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import DashboardMember from "../components/Dashboard-member";
 import MemberApplications from "../components/Applications-member";
+import Settings from "./Settings";
 import { useState, useEffect } from "react";
 import axios from "axios";
 const MemberDashboard = () => {
@@ -50,6 +51,7 @@ const MemberDashboard = () => {
       const navItems = [
         { icon: "📊", text: "Dashboard", page: "dashboard" },
         { icon: "📝", text: "Applications", page: "apply" },
+        { icon: "🛠 ", text: "Settings", page: "settings" },
       ];
        const stats = [
          {
@@ -104,6 +106,8 @@ const MemberDashboard = () => {
         );
       case "apply":
         return <MemberApplications />;
+      case "settings":
+        return <Settings role={"member"} />;
       default:
         return (
           <DashboardMember

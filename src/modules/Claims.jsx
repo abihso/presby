@@ -17,7 +17,7 @@ const Claims = () => {
          },
        })
        .then((res) => {
-         setUser(`${res.data.fname} ${res.data.lname}`);
+         setUser(`${res.data.member.fname} ${res.data.member.lname}`);
        })
        .catch((err) => console.log(err));
   },[])

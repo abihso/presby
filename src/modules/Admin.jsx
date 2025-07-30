@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import Claims from "./Claims";
 import axios from "axios";
 import AdminForm from "./Admin-Form";
+import Settings from "./Settings";
 const Admin = () => {
   // const [adminData,setAdminData] = useState([])
   const [modal,setModal] = useState(false)
@@ -71,12 +72,12 @@ const Admin = () => {
    const [sidebarOpen, setSidebarOpen] = useState(false);
    
     const navItems = [
-      { icon: "📊", text: "Dashboard", page: "dashboard" }, 
+      { icon: "📊", text: "Dashboard", page: "dashboard" },
       { icon: "👨‍🎓", text: "Register", page: "register" },
       { icon: "📅", text: "Applications", page: "applications" },
       { icon: "📅", text: "Pay Claims", page: "claims" },
-   
-  ];
+      { icon: "🛠 ", text: "Setting", page: "settings" },
+    ];
    const stats = [
      {
        title: "Total Applications",
@@ -140,6 +141,8 @@ const Admin = () => {
          return <RegisterMember />;
        case "applications":
          return <AdminApplications />;
+       case "settings":
+         return <Settings role={"admin"} />;
        case "claims":
          return <Claims />;
        default:

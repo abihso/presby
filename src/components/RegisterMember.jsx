@@ -45,7 +45,7 @@ const RegisterMember = () => {
       })
       .catch((err) => {
         console.log(err)
-        alert("Problem saving records")
+        alert(`${err.response.data.message || "Problem saving record"}`);
       });
   };
 
